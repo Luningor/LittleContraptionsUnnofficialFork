@@ -102,11 +102,11 @@ repositories {
     maven { url = "https://maven.tterrag.com/" } // Registrate
 
     // JEI (debug)
-    maven {
+    /*maven {
         // location of the maven that hosts JEI files since January 2023
         name = "Jared's maven"
         url = "https://maven.blamejared.com/"
-    }
+    }*/
 }
 
 dependencies {
@@ -130,7 +130,7 @@ dependencies {
     implementation fg.deobf("curse.maven:little-logistics-570050:4799459")
 
     // JEI (debug)
-    runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
+    //runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -149,7 +149,7 @@ tasks.named('processResources', ProcessResources).configure {
             registrate_version: registrate_version, patchouli_version_range: patchouli_version_range,
             mod_url: mod_url, mod_icon_path: mod_icon_path,
             ll_version_range: ll_version_range, ll_version: ll_version,
-            jei_version: jei_version
+            //jei_version: jei_version
     ]
     inputs.properties replaceProperties
 
