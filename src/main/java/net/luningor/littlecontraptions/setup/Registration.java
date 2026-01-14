@@ -1,13 +1,11 @@
 package net.luningor.littlecontraptions.setup;
 
 import net.luningor.littlecontraptions.LCMod;
-import com.tterrag.registrate.util.OneTimeEventReceiver;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,6 +24,7 @@ public class Registration {
     }
 
     public static void register () {
+        @SuppressWarnings( "removal" )
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
@@ -37,6 +36,6 @@ public class Registration {
         LCBlockEntityTypes.register();
         LCEntityTypes.register();
 
-        OneTimeEventReceiver.addListener(eventBus, FMLClientSetupEvent.class, (event) -> event.enqueueWork(LCPonder::register));
+        //OneTimeEventReceiver.addForgeListener(FMLClientSetupEvent.class, (event) -> event.enqueueWork(LCPonderPlugin::register));
     }
 }

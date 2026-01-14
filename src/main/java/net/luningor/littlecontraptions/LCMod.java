@@ -1,10 +1,13 @@
 package net.luningor.littlecontraptions;
 
+import net.createmod.ponder.foundation.PonderIndex;
 import net.luningor.littlecontraptions.setup.Registration;
-//import com.simibubi.create.foundation.ponder.PonderRegistry;
-//import com.simibubi.create.foundation.ponder.ui.PonderButton;
+import net.luningor.littlecontraptions.setup.ponder.LCPonderPlugin;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -20,5 +23,18 @@ public class LCMod
         Registration.register();
 
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    public static ResourceLocation asResource(String name) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, name);
+    }
+
+    @SubscribeEvent
+    public void setup(final FMLClientSetupEvent event) {
+        PonderIndex.addPlugin(new LCPonderPlugin());
+    }
+
+    public static String asLocalization(String key) {
+        return MOD_ID + "." + key;
     }
 }
