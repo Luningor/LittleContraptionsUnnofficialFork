@@ -19,7 +19,7 @@
 // ^ Ya I took it from them. Thanks my goats I will never forget this
 // Fuck everyone that refuses to make a wiki for ts tho, it shouldn't be this hard, man
 
-package net.luningor.littlecontraptions.setup.ponder;
+/*package net.luningor.littlecontraptions.setup.ponder;
 
 import com.simibubi.create.AllItems;
 import com.simibubi.create.foundation.ponder.CreateSceneBuilder;
@@ -28,6 +28,7 @@ import com.simibubi.create.infrastructure.ponder.AllCreatePonderTags;
 import com.tterrag.registrate.util.entry.ItemProviderEntry;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 //import net.createmod.ponder.api.registration.PonderSceneRegistrationHelper;
+import net.createmod.ponder.api.registration.PonderSceneRegistrationHelper;
 import net.createmod.ponder.foundation.registration.GenericPonderSceneRegistrationHelper;
 import net.luningor.littlecontraptions.ponder.AssemblerScenes;
 import net.luningor.littlecontraptions.LCMod;
@@ -42,11 +43,10 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.RegistryObject;
 
 public class LCPonderScenes {
-    public static void register(GenericPonderSceneRegistrationHelper<ResourceLocation> helper) {
-        GenericPonderSceneRegistrationHelper<RegistryObject<Item>> HELPER = helper.withKeyFunction(RegistryObject<Item>::getId);
+    public static void register(PonderSceneRegistrationHelper<ResourceLocation> helper) {
+        PonderSceneRegistrationHelper<ItemProviderEntry<?>> HELPER = helper.withKeyFunction(RegistryEntry::getId);
 
-        AllItems.register();
-        HELPER.forComponents(LCItems.BARGE_ASSEMBLER)
+        HELPER.forComponents(AllBlocks.SHAFT)
                 .addStoryBoard("basic_assembler", AssemblerScenes::basicAssemblerScene);
 
     }
