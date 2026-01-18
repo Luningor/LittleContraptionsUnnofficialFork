@@ -29,11 +29,6 @@ public class LCMod
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, name);
     }
 
-    /*@SubscribeEvent
-    public void setup(final FMLClientSetupEvent event) {
-        PonderIndex.addPlugin(new LCPonderPlugin());
-    }*/
-
     public static String asLocalization(String key) {
         return MOD_ID + "." + key;
     }

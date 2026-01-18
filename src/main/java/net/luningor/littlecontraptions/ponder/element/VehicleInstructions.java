@@ -1,4 +1,4 @@
-/*package net.luningor.littlecontraptions.ponder.element;
+package net.luningor.littlecontraptions.ponder.element;
 
 import net.createmod.ponder.api.element.ElementLink;
 import net.createmod.ponder.api.scene.SceneBuilder;

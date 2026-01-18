@@ -1,4 +1,4 @@
-/*package net.luningor.littlecontraptions.ponder.element;
+package net.luningor.littlecontraptions.ponder.element;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.createmod.ponder.foundation.PonderScene;

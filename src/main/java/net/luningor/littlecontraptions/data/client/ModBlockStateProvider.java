@@ -20,6 +20,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     @Override
+    @SuppressWarnings("removal")
     protected void registerStatesAndModels() {
         getVariantBuilder(LCBlocks.BARGE_ASSEMBLER.get()).forAllStates(state -> {
             String suffix = state.getValue(BargeAssemblerBlock.POWERED) ? "_on" : "_off";

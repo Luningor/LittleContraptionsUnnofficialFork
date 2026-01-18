@@ -1,6 +1,8 @@
 package net.luningor.littlecontraptions.setup;
 
 import net.luningor.littlecontraptions.LCMod;
+import net.luningor.littlecontraptions.setup.ponder.LCPonderPlugin;
+import net.luningor.littlecontraptions.setup.ponder.LCPonderScenes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

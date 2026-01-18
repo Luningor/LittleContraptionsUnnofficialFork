@@ -19,7 +19,7 @@
 // ^ Ya I took it from them. Thanks my goats I will never forget this
 // Fuck everyone that refuses to make a wiki for ts tho, it shouldn't be this hard, man
 
-/*package net.luningor.littlecontraptions.setup.ponder;
+package net.luningor.littlecontraptions.setup.ponder;
 
 import net.createmod.ponder.api.registration.PonderPlugin;
 import net.createmod.ponder.foundation.registration.GenericPonderSceneRegistrationHelper;
@@ -34,6 +34,10 @@ public class LCPonderPlugin implements PonderPlugin {
     @MethodsReturnNonnullByDefault
     public String getModId() {
         return LCMod.MOD_ID;
+    }
+
+    static {
+        System.out.println("LC PONDER PLUGIN LOADED");
     }
 
     @ParametersAreNonnullByDefault

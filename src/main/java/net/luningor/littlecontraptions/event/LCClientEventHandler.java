@@ -29,6 +29,7 @@ public class LCClientEventHandler {
     }
 
     @SubscribeEvent
+    @SuppressWarnings("removal")
     public static void onRegisterEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(LCEntityTypes.CONTRAPTION_BARGE.get(),
                 (ctx) -> new MultipartVesselRenderer.Builder<>(ctx)
